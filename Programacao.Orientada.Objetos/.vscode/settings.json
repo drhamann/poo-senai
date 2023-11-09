@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "csharp.format.enable": true,
+  "csharp.format.insertSpaceAfterCommaDelimiter": true,
+  "csharp.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  "csharp.format.insertSpaceAfterColonInBaseTypeDeclaration": true,
+  "csharp.format.insertSpaceAfterCommaInBaseTypeDeclaration": true,
+  "csharp.suppressDotnetRestoreNotification": true,
+  "omnisharp.enableEditorConfigSupport": true,
+  "omnisharp.useGlobalMono": "always",
+  "omnisharp.loggingLevel": "information",
+  "omnisharp.path": "latest",
+  "dotnet-test-explorer.testProjectPath": "src",
+  "dotnet-test-explorer.autoExpandProjects": true,
+  "dotnet-test-explorer.exclude": ["**/bin/**", "**/obj/**", "**/node_modules/**"],
+  "dotnet-test-explorer.showCodeLens": true,
+  "dotnet-test-explorer.showFailedTests": "always",
+  "nuget.autoRestore": true,
+  "dotnet.codeLens.enableReferencesCodeLens": true
+}

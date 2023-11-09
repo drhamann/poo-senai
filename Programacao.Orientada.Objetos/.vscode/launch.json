@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET Core Launch (web)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/YourProjectName.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "serverLaunchTimeout": 5000,
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": [
+        "run"
+      ],
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      },
+      "pipeTransport": {
+        "pipeCwd": "${workspaceFolder}",
+        "pipeProgram": "bash",
+        "pipeArgs": ["-c"],
+        "debuggerPath": "/usr/bin/netcoredbg"
+      },
+      "logging": {
+        "engineLogging": true,
+        "exceptions": true,
+        "moduleLoad": true,
+        "programOutput": true
+      },
+      "port": 5000
+    }
+  ]
+}
