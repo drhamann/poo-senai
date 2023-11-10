@@ -3,6 +3,7 @@
         "ms-dotnettools.csdevkit",
         "ms-dotnettools.vscodeintellicode-csharp",
         "ms-dotnettools.vscode-dotnet-runtime",
-        "patcx.vscode-nuget-gallery"
+        "patcx.vscode-nuget-gallery",
+        "kreativ-software.csharpextensions"
     ]
 }
