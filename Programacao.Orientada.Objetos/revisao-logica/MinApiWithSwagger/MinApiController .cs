@@ -208,7 +208,7 @@ namespace MinApiWithSwagger.Controllers
             bool falseValue = false;
             bool andResult = trueValue && falseValue;
             bool orResult = trueValue || falseValue;
-            bool notResult = !trueValue;
+            bool notResult = trueValue is false;
 
             return new { AndResult = andResult, OrResult = orResult, NotResult = notResult };
         }
@@ -245,17 +245,25 @@ namespace MinApiWithSwagger.Controllers
             return result;
         }
 
+        enum temperatura
+        {
+            celcisus = 0,
+            kelvin = 1,
+            fareightn = 2
+        }
+
         private object GetRepetitionStructuresResult()
         {
             // For Loop Example
             string forLoopResult = "";
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
             {
                 forLoopResult += $"Count: {i}\n";
             }
 
             // While Loop Example
             int[] numbers = { 1, 2, 3, 4, 5 };
+
             string whileLoopResult = "";
             int index = 0;
             while (index < numbers.Length)

@@ -17,7 +17,11 @@ namespace MinApiWithSwagger.Controllers
         [HttpGet("fizzbuzz")]
         public IActionResult FizzBuzz()
         {
-            return Ok();
+            var fizzBuzz = new FizzBuzz();
+
+            var fizzBuzzResult = fizzBuzz.Calculate(30);
+
+            return Ok(fizzBuzzResult);
         }
 
         // Exercício 2: Soma dos Quadrados

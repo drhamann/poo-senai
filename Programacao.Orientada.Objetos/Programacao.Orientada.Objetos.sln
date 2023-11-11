@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "revisao-logica", "revisao-l
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinApiWithSwagger", "revisao-logica\MinApiWithSwagger\MinApiWithSwagger.csproj", "{7A183650-A5D8-4C65-BBEE-71D54132D6A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinApiWithSwaggerTests", "revisao-logica\MinApiWithSwaggerTests\MinApiWithSwaggerTests.csproj", "{93136E95-58C0-4C9F-A5AB-DAB5279F2679}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{7A183650-A5D8-4C65-BBEE-71D54132D6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A183650-A5D8-4C65-BBEE-71D54132D6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A183650-A5D8-4C65-BBEE-71D54132D6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93136E95-58C0-4C9F-A5AB-DAB5279F2679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93136E95-58C0-4C9F-A5AB-DAB5279F2679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93136E95-58C0-4C9F-A5AB-DAB5279F2679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93136E95-58C0-4C9F-A5AB-DAB5279F2679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
