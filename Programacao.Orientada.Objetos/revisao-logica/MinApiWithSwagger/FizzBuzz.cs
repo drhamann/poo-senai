@@ -6,12 +6,13 @@
         {
         }
 
+
         public string[] Calculate(int númeroAcalcular)
         {
             var listaFizzBuzz = new List<string>();
             for (int i = 1; i <= númeroAcalcular; i++)
             {
-                var fizzResult = IsFizz(i);
+                string fizzResult = IsFizz(i);
                 fizzResult = IsBuzz(i, fizzResult);
                 fizzResult = IsFizzBuzz(i, fizzResult);
 
@@ -23,7 +24,11 @@
 
         private string IsFizz(int position)
         {
-            return position % 3 == 0 ? "Fizz" : position.ToString();
+            if (position % 3 == 0)
+            {
+                return "Fizz";
+            }
+            return position.ToString();
         }
 
         private string IsBuzz(int position, string lastResult)
