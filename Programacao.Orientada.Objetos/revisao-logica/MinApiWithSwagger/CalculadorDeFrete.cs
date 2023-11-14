@@ -4,6 +4,7 @@ namespace MinApiWithSwagger
 {
     public class CalculadorDeFrete
     {
+
         /// <summary>
         /// Calculo de frete para uma compra
         /// Vamos criar um programa que receba a distância entre o distribuidor e o local de entrega e calcule o valor do frete, sendo que para km é cobrado R$ 0,10 
@@ -21,8 +22,20 @@ namespace MinApiWithSwagger
         public double CalcularFrete(int distancia, int peso)
         {
             // TODO: Calcular frete
+            const double multiplicador = 0.1;
+            const double taxa200km = 200.0;
+            const double valorTaxa200km = 1.0;
 
-            return 0.0;
+            double valorDoFrete = 0;
+
+            valorDoFrete = multiplicador * distancia;
+            if (distancia >= taxa200km)
+            {
+                double calculoTaxa200km = Math.Floor(distancia / taxa200km) * valorTaxa200km;
+
+                valorDoFrete += calculoTaxa200km;
+            }
+            return valorDoFrete;
         }
     }
 
