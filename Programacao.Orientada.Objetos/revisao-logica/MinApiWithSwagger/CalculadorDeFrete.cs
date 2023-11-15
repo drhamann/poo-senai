@@ -4,6 +4,12 @@ namespace MinApiWithSwagger
 {
     public class CalculadorDeFrete
     {
+        const double multiplicador = 0.1;
+        const double taxa200km = 200.0;
+        const double valorTaxa200km = 1.0;
+
+        const double taxa1000km = 1000;
+        const double valorTaxa1000km = 10;
 
         /// <summary>
         /// Calculo de frete para uma compra
@@ -21,21 +27,31 @@ namespace MinApiWithSwagger
         /// <returns></returns>
         public double CalcularFrete(int distancia, int peso)
         {
-            // TODO: Calcular frete
-            const double multiplicador = 0.1;
-            const double taxa200km = 200.0;
-            const double valorTaxa200km = 1.0;
 
-            double valorDoFrete = 0;
+            double valorDoFrete = CalculoValorBaseFrete(distancia, multiplicador);
+            valorDoFrete += CalculoTaxaPorKmVsDistancia(distancia, taxa200km, valorTaxa200km);
+            valorDoFrete += CalculoTaxaPorKmVsDistancia(distancia, taxa1000km, valorTaxa1000km);
 
-            valorDoFrete = multiplicador * distancia;
-            if (distancia >= taxa200km)
-            {
-                double calculoTaxa200km = Math.Floor(distancia / taxa200km) * valorTaxa200km;
-
-                valorDoFrete += calculoTaxa200km;
-            }
             return valorDoFrete;
+        }
+
+        private static double CalculoValorBaseFrete(int distancia, double multiplicador)
+        {
+            return multiplicador * distancia;
+        }
+
+        private double CalculoTaxaPorKmVsDistancia(int distancia, double taxaKm, double valorTaxaKm)
+        {
+            if (distancia >= taxaKm)
+            {
+                var multiplicadorTaxa = Math.Floor(distancia / taxaKm);
+
+                double calculoTaxa = multiplicadorTaxa * valorTaxaKm;
+
+                return calculoTaxa;
+            }
+
+            return 0;
         }
     }
 

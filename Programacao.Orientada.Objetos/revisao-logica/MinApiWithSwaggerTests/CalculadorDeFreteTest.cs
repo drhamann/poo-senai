@@ -47,5 +47,21 @@ namespace MinApiWithSwaggerTests
 
             Assert.Equivalent(Math.Round(expectedValor, 2), Math.Round(result, 2));
         }
+
+        [Theory]
+        [InlineData(1000, 115)]
+        [InlineData(1200, 136)]
+        [InlineData(1999, 218.9)]
+        [InlineData(2000, 230)]
+        public void Deve_Calcular_O_Frete_De_Uma_Distancia_Maior_Que_1000km
+           (int distancia, double expectedValor)
+        {
+            //Act
+            var result = _calculadorDeFrete.CalcularFrete(distancia, 4);
+
+            //Assert
+
+            Assert.Equivalent(Math.Round(expectedValor, 2), Math.Round(result, 2));
+        }
     }
 }
