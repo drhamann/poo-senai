@@ -63,5 +63,36 @@ namespace MinApiWithSwaggerTests
 
             Assert.Equivalent(Math.Round(expectedValor, 2), Math.Round(result, 2));
         }
+
+        [Theory]
+        [InlineData(1, 5, 0.5)]
+        [InlineData(100, 25, 50.0)]
+        [InlineData(199, 17, 99.5)]
+        public void Deve_Calcular_O_Frete_De_Uma_Distancia_Menor_Que_200km_Peso_Entre_5_E_25
+           (int distancia, int peso, double expectedValor)
+        {
+
+            //Act
+            var result = _calculadorDeFrete.CalcularFrete(distancia, peso);
+
+            //Assert
+
+            Assert.Equivalent(Math.Round(expectedValor, 2), Math.Round(result, 2));
+        }
+        [Theory]
+        [InlineData(1, 26, 0.3)]
+        [InlineData(100, 50, 30)]
+        [InlineData(199, 75, 59.7)]
+        public void Deve_Calcular_O_Frete_De_Uma_Distancia_Menor_Que_200km_Peso_Entre_26_E_75
+       (int distancia, int peso, double expectedValor)
+        {
+
+            //Act
+            var result = _calculadorDeFrete.CalcularFrete(distancia, peso);
+
+            //Assert
+
+            Assert.Equivalent(Math.Round(expectedValor, 2), Math.Round(result, 2));
+        }
     }
 }

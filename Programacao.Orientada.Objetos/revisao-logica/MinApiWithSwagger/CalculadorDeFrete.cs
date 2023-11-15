@@ -32,7 +32,7 @@ namespace MinApiWithSwagger
             valorDoFrete += CalculoTaxaPorKmVsDistancia(distancia, taxa200km, valorTaxa200km);
             valorDoFrete += CalculoTaxaPorKmVsDistancia(distancia, taxa1000km, valorTaxa1000km);
 
-            return valorDoFrete;
+            return CalculoFreteMultiplicadoPorPeso(valorDoFrete, peso);
         }
 
         private static double CalculoValorBaseFrete(int distancia, double multiplicador)
@@ -52,6 +52,19 @@ namespace MinApiWithSwagger
             }
 
             return 0;
+        }
+
+        private double CalculoFreteMultiplicadoPorPeso(double frete, int peso)
+        {
+            if (peso >= 5 && peso <= 25)
+            {
+                return frete * 5;
+            }
+            if (peso > 25 && peso <= 75)
+            {
+                return frete * 3;
+            }
+            return frete;
         }
     }
 
