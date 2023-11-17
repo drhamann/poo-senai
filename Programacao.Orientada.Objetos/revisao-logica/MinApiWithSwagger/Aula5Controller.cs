@@ -24,4 +24,16 @@ public class Aula5Controller : ControllerBase
 
         return Ok(FiguraGeometrica.ToString());
     }
+
+    [HttpGet("figura-geometrica-quadrado-retangulo")]
+    public IActionResult Quadrado_Retangulo(double lado)
+    {
+        FiguraGeometrica quadrado = new Retangulo(lado, lado);
+        FiguraGeometrica retangulo = new Quadrado(lado);
+
+
+        return Ok(
+            $"{retangulo.ToString()}" +
+            $"\r\n{quadrado.ToString()}");
+    }
 }
