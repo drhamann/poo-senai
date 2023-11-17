@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,25 +11,30 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure a aplicação.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
-}
 
-app.UseHttpsRedirection();
-app.UseAuthorization();
+
+// Adicione os endpoints.
+app.MapGet("/corrida-cachorro", () =>
+{
+    //TODO    
+
+})
+    .WithName("corrida-cachorro")
+    .WithOpenApi();
+
 
 // Adicione os endpoints.
 app.MapGet("/fibonacci", (int valorSequencia) =>
 {
 
-});
-
+}).WithName("fibonacci").WithOpenApi();
 app.MapGet("/conversor", (int celsius) =>
 {
 
-});
+}).WithName("conversor").WithOpenApi();
+
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();

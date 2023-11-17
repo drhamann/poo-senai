@@ -64,7 +64,7 @@ namespace MinApiWithSwaggerTests
             Assert.Equivalent(Math.Round(expectedValor, 2), Math.Round(result, 2));
         }
 
-        [[Theory]
+        [Theory]
         [InlineData(1, 5, 0.5)]
         [InlineData(100, 25, 50.0)]
         [InlineData(199, 17, 99.5)]

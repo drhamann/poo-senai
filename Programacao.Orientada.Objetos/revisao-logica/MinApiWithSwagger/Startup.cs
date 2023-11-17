@@ -18,8 +18,10 @@ namespace MinApiWithSwagger
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MinApiWithSwagger", Version = "v1" });
             });
+
             services.AddScoped<CalculadorDeFrete>();
             services.AddScoped<CorridaCachorros>();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

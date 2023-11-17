@@ -8,11 +8,19 @@ namespace MinApiWithSwagger;
 public class Aula5Controller : ControllerBase
 {
     FiguraGeometrica FiguraGeometrica { get; set; }
+    public Aula5Controller()
+    {
+    }
 
     [HttpGet("figura-geometrica-quadrado")]
     public IActionResult Quadrado(double lado)
     {
         FiguraGeometrica = new Quadrado(lado);
+        if (FiguraGeometrica is Retangulo retangulo)
+        {
+            retangulo.Altura = lado;
+            retangulo.Lado = lado;
+        }
 
         return Ok(FiguraGeometrica.ToString());
     }
@@ -26,11 +34,10 @@ public class Aula5Controller : ControllerBase
     }
 
     [HttpGet("figura-geometrica-quadrado-retangulo")]
-    public IActionResult Quadrado_Retangulo(double lado)
+    public IActionResult Quadrado_Retangulo(double lado, double altura)
     {
-        FiguraGeometrica quadrado = new Retangulo(lado, lado);
+        FiguraGeometrica quadrado = new Retangulo(lado, altura);
         FiguraGeometrica retangulo = new Quadrado(lado);
-
 
         return Ok(
             $"{retangulo.ToString()}" +

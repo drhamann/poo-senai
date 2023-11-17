@@ -13,6 +13,11 @@ public class Retangulo : FiguraGeometrica
         Nome = "Retangulo";
     }
 
+    public Retangulo()
+    {
+        Nome = "Retangulo";
+    }
+
     public override double CalcularArea()
     {
         return Lado * Altura;
