@@ -11,6 +11,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MinApiWithSwaggerTests", "r
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aula-5", "Aula-5\Aula-5.csproj", "{572B4205-AA45-4F25-B6E3-B6DCA0253B1F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentacao", "documentacao", "{7CCB656E-2703-4AB9-9EF7-F5580CEAA0EC}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\Aula 3.md = ..\docs\Aula 3.md
+		..\docs\Programação Orientada a Objetos Aula 1.pdf = ..\docs\Programação Orientada a Objetos Aula 1.pdf
+		..\docs\Programação Orientada a Objetos Aula 2.pdf = ..\docs\Programação Orientada a Objetos Aula 2.pdf
+		..\docs\Programação Orientada a Objetos Aula 3.pdf = ..\docs\Programação Orientada a Objetos Aula 3.pdf
+		..\docs\Programação Orientada a Objetos Aula 4.pdf = ..\docs\Programação Orientada a Objetos Aula 4.pdf
+		..\docs\Programação Orientada a Objetos Aula 5.pdf = ..\docs\Programação Orientada a Objetos Aula 5.pdf
+		..\..\..\..\Users\Professor.SS-331914\Downloads\Programação Orientada a Objetos Aula 6.pdf = ..\..\..\..\Users\Professor.SS-331914\Downloads\Programação Orientada a Objetos Aula 6.pdf
+		..\docs\Programação Orientada a Objetos Aula 6.pdf = ..\docs\Programação Orientada a Objetos Aula 6.pdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
