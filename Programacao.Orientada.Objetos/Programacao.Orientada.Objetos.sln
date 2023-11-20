@@ -19,9 +19,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentacao", "documentaca
 		..\docs\Programação Orientada a Objetos Aula 3.pdf = ..\docs\Programação Orientada a Objetos Aula 3.pdf
 		..\docs\Programação Orientada a Objetos Aula 4.pdf = ..\docs\Programação Orientada a Objetos Aula 4.pdf
 		..\docs\Programação Orientada a Objetos Aula 5.pdf = ..\docs\Programação Orientada a Objetos Aula 5.pdf
-		..\..\..\..\Users\Professor.SS-331914\Downloads\Programação Orientada a Objetos Aula 6.pdf = ..\..\..\..\Users\Professor.SS-331914\Downloads\Programação Orientada a Objetos Aula 6.pdf
 		..\docs\Programação Orientada a Objetos Aula 6.pdf = ..\docs\Programação Orientada a Objetos Aula 6.pdf
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorridaDeCachorros", "CorridaDeCachorros\CorridaDeCachorros.csproj", "{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorridaDeCachorrosTests", "CorridaDeCachorrosTests\CorridaDeCachorrosTests.csproj", "{EDDED09F-7EBB-4113-8145-A21C94D144BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +48,14 @@ Global
 		{572B4205-AA45-4F25-B6E3-B6DCA0253B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{572B4205-AA45-4F25-B6E3-B6DCA0253B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{572B4205-AA45-4F25-B6E3-B6DCA0253B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDED09F-7EBB-4113-8145-A21C94D144BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDED09F-7EBB-4113-8145-A21C94D144BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDED09F-7EBB-4113-8145-A21C94D144BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDED09F-7EBB-4113-8145-A21C94D144BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

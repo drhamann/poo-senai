@@ -15,6 +15,11 @@ public abstract class FiguraGeometrica
         return 0;
     }
 
+    public string GerarNome()
+    {
+        return Nome + Math.Log10(100);
+    }
+
     public override string ToString()
     {
         return $"Nome da forma {Nome} Area = {CalcularArea()} Perimeto {CalcularPerimetro()}";
