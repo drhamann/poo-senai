@@ -22,9 +22,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentacao", "documentaca
 		..\docs\Programação Orientada a Objetos Aula 6.pdf = ..\docs\Programação Orientada a Objetos Aula 6.pdf
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorridaDeCachorros", "CorridaDeCachorros\CorridaDeCachorros.csproj", "{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorridaDeCachorros", "CorridaDeCachorros\CorridaDeCachorros.csproj", "{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorridaDeCachorrosTests", "CorridaDeCachorrosTests\CorridaDeCachorrosTests.csproj", "{EDDED09F-7EBB-4113-8145-A21C94D144BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorridaDeCachorrosTests", "CorridaDeCachorrosTests\CorridaDeCachorrosTests.csproj", "{EDDED09F-7EBB-4113-8145-A21C94D144BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projeto 1", "Projeto 1", "{A65768C1-1983-4CAD-ABF6-01F9879CD2C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B94F8B9-570E-4220-BFAF-D9D3BA59342B} = {A65768C1-1983-4CAD-ABF6-01F9879CD2C7}
+		{EDDED09F-7EBB-4113-8145-A21C94D144BF} = {A65768C1-1983-4CAD-ABF6-01F9879CD2C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {981BD26D-A544-4B03-A5B1-5969430AD4ED}
