@@ -4,8 +4,8 @@
 - Deve pedir quantos apostadores terá a partida ( OK)
 - Todo apostador começa com R$ 20,00 ( OK ) 
 - Deve ter no mínimo 5 apostadores ( OK ) 
-- Deve informar quantos corredores terá a casa de apostas
-- Deve ter no mínimo 4 corredores
+- Deve informar quantos corredores terá a casa de apostas ( OK )
+- Deve ter no mínimo 4 corredores ( OK )
 - Os corredores podem mover aleatoriamente a cada rodada entre 10cm até 60 cm 
 - Deve fazer com que cada apostador informe em qual corredor ele irá apostar
 - Ganha a corrida o corredor que chegar em 100 metros primeiro
