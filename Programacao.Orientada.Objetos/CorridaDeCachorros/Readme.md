@@ -6,7 +6,7 @@
 - Deve ter no mínimo 5 apostadores ( OK ) 
 - Deve informar quantos corredores terá a casa de apostas ( OK )
 - Deve ter no mínimo 4 corredores ( OK )
-- Os corredores podem mover aleatoriamente a cada rodada entre 10cm até 60 cm 
+- Os corredores podem mover aleatoriamente a cada rodada entre 10cm até 60 cm ( 
 - Deve fazer com que cada apostador informe em qual corredor ele irá apostar
 - Ganha a corrida o corredor que chegar em 100 metros primeiro
 - Até o terceiro colocado recebe prêmio proporcional ao valor das apostas, sendo 70%, 20% e 10%

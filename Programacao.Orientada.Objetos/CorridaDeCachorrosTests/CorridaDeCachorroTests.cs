@@ -43,7 +43,7 @@ public class CorridaDeCachorroTests
 
         //Act
         CorridaDeCachorro corridaDeCachorro
-            = new CorridaDeCachorro(5, expectedCorredores);
+            = new CorridaDeCachorro(5);
 
         //Assert
         corridaDeCachorro.Corredores.Count.Should().Be(expectedCorredores);
@@ -62,6 +62,25 @@ public class CorridaDeCachorroTests
         }catch( ArgumentException ex)
         {
             ex.Message.Should().Be("No minimo é permitido 4 corredores");
+        }
+    }
+
+    [Fact]
+    public void Deve_Os_Corredores_Mover_Entre_Dezcm_E_Sessentacm()
+    {
+        //Arrange
+        var corridaDeCachorro = new CorridaDeCachorro(5);
+        double distanciaEsperadaMaiorQue = 0.1;
+        double distanciaEsperadaMenorQue = 0.6;
+
+        foreach (var corredor in corridaDeCachorro.Corredores)
+        {
+            //Act
+            corredor.Mover();
+
+            //Assert
+            corredor.DistanciaPercorrida().Should().BeGreaterThanOrEqualTo(distanciaEsperadaMaiorQue);
+            corredor.DistanciaPercorrida().Should().BeLessThanOrEqualTo(distanciaEsperadaMenorQue);
         }
     }
 
