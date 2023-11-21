@@ -84,4 +84,43 @@ public class CorridaDeCachorroTests
         }
     }
 
+    [Fact]
+    public void Deve_Permetir_O_Apostador_Escolher_Um_Corredor()
+    {
+        //Arrange
+        var corridaDeCachorro = new CorridaDeCachorro(5);
+        var corredorEsperado = corridaDeCachorro.Corredores.First();
+        var apostadorEsperado = corridaDeCachorro.Apostadores.First();
+
+        //Act
+        corridaDeCachorro.EscolherCorredor(apostadorEsperado, corredorEsperado);
+
+        //Assert
+        apostadorEsperado.CachorroApostado.Should().Be(corredorEsperado.Id);
+
+     }
+
+    [Fact]
+    public void Deve_Permetir_O_Apostador_Escolher_Um_Corredor_Pelos_Nomes()
+    {
+        //Arrange
+        var corridaDeCachorro = new CorridaDeCachorro(5);
+        var nomeDoApostador = "Apostador-1";
+        var nomeDoCorredor = "Corredor-3";
+
+        var apostadorExperado = corridaDeCachorro.Apostadores.Find(apostador => apostador.Nome.Equals(nomeDoApostador));
+        var cachorroEsperado = corridaDeCachorro.Corredores.Find(corredor => corredor.Nome.Equals(nomeDoCorredor));
+
+        //Act
+        corridaDeCachorro.EscolherCorredor(nomeDoApostador, nomeDoCorredor);
+
+        //Assert
+
+        apostadorExperado.CachorroApostado.Should().Be(cachorroEsperado.Id);
+        cachorroEsperado.Nome.Should().Be(nomeDoCorredor);
+        apostadorExperado.Nome.Should().Be(nomeDoApostador);
+
+
+    }
+
 }

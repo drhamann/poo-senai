@@ -40,7 +40,20 @@ public class CorridaDeCachorro
         {
             Corredores.Add(new Corredor(i));
         }
+    }
 
+    public void EscolherCorredor(Apostador apostador, Corredor corredor)
+    {
+        //TODO: 
+        apostador.CachorroApostado = corredor.Id;
+    }
+
+    public void EscolherCorredor(string NomeApostador, string NomeCorredor)
+    {
+        var apostador = Apostadores.Find(apostador => apostador.Nome.Equals(NomeApostador));
+        var cachorroCorredor = Corredores.Find(corredor => corredor.Nome.Equals(NomeCorredor));
+
+        apostador.CachorroApostado = cachorroCorredor.Id;
 
     }
 }

@@ -6,6 +6,9 @@ public class Apostador : BaseModel
 
     public double Saldo { get; set; }
 
+    public Guid CachorroApostado { get; set; }
+
+
     public Apostador(int posicaoApostador) : base()
     {
         Saldo = VALOR_INICIAL_CORRIDA;
