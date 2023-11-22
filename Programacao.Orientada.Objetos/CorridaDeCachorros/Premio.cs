@@ -29,5 +29,10 @@ namespace CorridaDeCachorros
         public double ValorTotal { get; }
         public double ValorParcial { get; }
         public List<Apostador> Apostadores { get; }
+
+        public override string ToString()
+        {
+            return "";
+        }
     }
 }

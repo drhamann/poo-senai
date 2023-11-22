@@ -1,3 +1,4 @@
+using CorridaDeCachorros;
 using Microsoft.OpenApi.Models;
 
 namespace MinApiWithSwagger
@@ -20,7 +21,7 @@ namespace MinApiWithSwagger
             });
 
             services.AddScoped<CalculadorDeFrete>();
-            services.AddScoped<CorridaCachorros>();
+            services.AddSingleton<CorridaDeCachorro>();
 
         }
 

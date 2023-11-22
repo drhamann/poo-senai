@@ -181,7 +181,7 @@ public class CorridaDeCachorroTests
 
 
         //Act
-        corridaDeCachorro.Ganhadores();
+        corridaDeCachorro.DefinirPremioGanhadores();
 
         //Arrange
         corridaDeCachorro.Primeiro.Should().NotBeNull();

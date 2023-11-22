@@ -24,7 +24,7 @@ public class CorridaDeCachorro
     public Premio TerceiroPremio { get; set; }
 
     public CorridaDeCachorro
-        (int numeroDeApostadores,
+        (int numeroDeApostadores = 5,
          int numeroDeCorredores = 4
         )
     {
@@ -54,7 +54,7 @@ public class CorridaDeCachorro
 
     public void EscolherCorredor(Apostador apostador, Corredor corredor, double totalAposta)
     {
-        if(apostador.Saldo < totalAposta)
+        if (apostador.Saldo < totalAposta)
         {
             throw new Exception("Não tem dinheiro");
         }
@@ -69,10 +69,10 @@ public class CorridaDeCachorro
         var apostador = Apostadores.Find(apostador => apostador.Nome.Equals(NomeApostador));
         var cachorroCorredor = Corredores.Find(corredor => corredor.Nome.Equals(NomeCorredor));
 
-        EscolherCorredor(apostador, cachorroCorredor,totalAposta);
+        EscolherCorredor(apostador, cachorroCorredor, totalAposta);
     }
 
-    public void Correr()
+    public string Correr()
     {
         while (Corredores.Exists(corredor =>
             corredor.DistanciaPercorrida() <= 100)
@@ -80,13 +80,20 @@ public class CorridaDeCachorro
         {
             VerificarCorredoresEcorrer();
         }
+        DefinirPremioGanhadores();
+
+        return 
+            
+            $"{PrimeiroPremio}\rn" +
+            $"{SegundoPremio}\r\n" +
+            $"{TerceiroPremio}";
     }
 
-    public void Ganhadores()
+    public void DefinirPremioGanhadores()
     {
-        var apostadoresEmPrimeiro 
+        var apostadoresEmPrimeiro
         = Apostadores.FindAll(apostador => apostador.CachorroApostado.Equals(Primeiro.Id));
-        PrimeiroPremio = 
+        PrimeiroPremio =
             new Premio(Posicoes.Primeiro, (ValorTotalDeApostas * 0.7), apostadoresEmPrimeiro);
 
         var apostadoresEmSegundo
