@@ -9,9 +9,13 @@
 - 
 - Os corredores podem mover aleatoriamente a cada rodada entre 10cm até 60 cm ( OK )
 - Deve fazer com que cada apostador informe em qual corredor ele irá apostar  ( OK ) 
+- Ganha a corrida o corredor que chegar em 100 metros primeiro ( ok ) 
 - 
-- Ganha a corrida o corredor que chegar em 100 metros primeiro
-- Até o terceiro colocado recebe prêmio proporcional ao valor das apostas, sendo 70%, 20% e 10%
+- Até o terceiro colocado recebe prêmio proporcional ao valor das apostas, 
+- sendo 70%, 
+- 20% e 
+- 10%
+- 
 - Todos devem finalizar a corrida
 - Deve mostrar ao finalizar a corrida 
 - Colocação dos corredores
