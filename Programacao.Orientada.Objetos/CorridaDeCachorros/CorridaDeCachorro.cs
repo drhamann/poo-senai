@@ -54,9 +54,9 @@ public class CorridaDeCachorro
             throw new Exception("Não tem dinheiro");
         }
 
-        apostador.ValorDaUltimaAposta = totalAposta;
         ValorTotalDeApostas += totalAposta;
         apostador.CachorroApostado = corredor.Id;
+        apostador.Saldo -= totalAposta;
     }
 
     public void Apostar(string NomeApostador, string NomeCorredor, double totalAposta)
