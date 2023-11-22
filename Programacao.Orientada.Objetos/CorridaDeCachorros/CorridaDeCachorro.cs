@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CorridaDeCachorros;
 
 public class CorridaDeCachorro
@@ -52,7 +47,7 @@ public class CorridaDeCachorro
         }
     }
 
-    public void EscolherCorredor(Apostador apostador, Corredor corredor, double totalAposta)
+    public void Apostar(Apostador apostador, Corredor corredor, double totalAposta)
     {
         if (apostador.Saldo < totalAposta)
         {
@@ -64,12 +59,12 @@ public class CorridaDeCachorro
         apostador.CachorroApostado = corredor.Id;
     }
 
-    public void EscolherCorredor(string NomeApostador, string NomeCorredor, double totalAposta)
+    public void Apostar(string NomeApostador, string NomeCorredor, double totalAposta)
     {
         var apostador = Apostadores.Find(apostador => apostador.Nome.Equals(NomeApostador));
         var cachorroCorredor = Corredores.Find(corredor => corredor.Nome.Equals(NomeCorredor));
 
-        EscolherCorredor(apostador, cachorroCorredor, totalAposta);
+        Apostar(apostador, cachorroCorredor, totalAposta);
     }
 
     public string Correr()
@@ -80,13 +75,11 @@ public class CorridaDeCachorro
         {
             VerificarCorredoresEcorrer();
         }
+
         DefinirPremioGanhadores();
 
-        return 
-            
-            $"{PrimeiroPremio}\rn" +
-            $"{SegundoPremio}\r\n" +
-            $"{TerceiroPremio}";
+
+        return "TODO";
     }
 
     public void DefinirPremioGanhadores()

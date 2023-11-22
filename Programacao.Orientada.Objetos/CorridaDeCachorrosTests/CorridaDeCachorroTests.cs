@@ -96,7 +96,7 @@ public class CorridaDeCachorroTests
         var valorDaAposta = 10;
 
         //Act
-        corridaDeCachorro.EscolherCorredor(apostadorEsperado, corredorEsperado, valorDaAposta);
+        corridaDeCachorro.Apostar(apostadorEsperado, corredorEsperado, valorDaAposta);
 
         //Assert
         apostadorEsperado.CachorroApostado.Should().Be(corredorEsperado.Id);
@@ -120,7 +120,7 @@ public class CorridaDeCachorroTests
         = corridaDeCachorro.Corredores.Find(corredor => corredor.Nome.Equals(nomeDoCorredor));
 
         //Act
-        corridaDeCachorro.EscolherCorredor(nomeDoApostador, nomeDoCorredor,valorDaAposta);
+        corridaDeCachorro.Apostar(nomeDoApostador, nomeDoCorredor,valorDaAposta);
 
         //Assert
         apostadorExperado.CachorroApostado.Should().Be(cachorroEsperado.Id);

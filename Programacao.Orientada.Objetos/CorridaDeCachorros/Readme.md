@@ -18,5 +18,6 @@
 - 
 - Todos devem finalizar a corrida
 - Deve mostrar ao finalizar a corrida 
+- 
 - Colocação dos corredores
 - Quanto cada apostador tem de saldo

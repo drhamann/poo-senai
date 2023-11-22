@@ -2,8 +2,9 @@
 
 public class Corredor : BaseModel
 {
-    private double _distanciaPercorrida { get; set; }
     private static readonly Random Random = new();
+
+    private double _distanciaPercorrida { get; set; }
     public Posicoes Posicao { get; set; }
 
     public Corredor(int posicaoCorredor) : base()

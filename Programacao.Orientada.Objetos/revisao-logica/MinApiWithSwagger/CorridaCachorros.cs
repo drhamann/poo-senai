@@ -27,7 +27,7 @@ namespace MinApiWithSwagger
         {
             try
             {
-                CorridaCachorros.EscolherCorredor(nomeDoApostador, nomeDoCorredor, totalAposta);
+                CorridaCachorros.Apostar(nomeDoApostador, nomeDoCorredor, totalAposta);
 
             }
             catch
