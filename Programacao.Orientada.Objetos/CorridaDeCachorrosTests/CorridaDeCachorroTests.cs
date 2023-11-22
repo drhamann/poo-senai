@@ -133,6 +133,12 @@ public class CorridaDeCachorroTests
     {
         //Arrange
         CorridaDeCachorro corridaDeCachorro = new CorridaDeCachorro(5);
+        Random random = new Random();
+        foreach (var apostador in corridaDeCachorro.Apostadores)
+        {
+            var cachorro = random.Next(0,corridaDeCachorro.Corredores.Count - 1);
+            corridaDeCachorro.Apostar(apostador, corridaDeCachorro.Corredores[cachorro], 5.0);
+        }
 
         //Act
         corridaDeCachorro.Correr();
@@ -147,6 +153,12 @@ public class CorridaDeCachorroTests
     {
         //Arrange
         CorridaDeCachorro corridaDeCachorro = new CorridaDeCachorro(5);
+        Random random = new Random();
+        foreach (var apostador in corridaDeCachorro.Apostadores)
+        {
+            var cachorro = random.Next(0, corridaDeCachorro.Corredores.Count - 1);
+            corridaDeCachorro.Apostar(apostador, corridaDeCachorro.Corredores[cachorro], 5.0);
+        }
 
         //Act
         corridaDeCachorro.Correr();
