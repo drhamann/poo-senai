@@ -12,7 +12,7 @@ public class CorridaDeCachorroTests
         var expectedApostadores = 5;
 
         //Act
-        CorridaDeCachorro corridaDeCachorro 
+        CorridaDeCachorro corridaDeCachorro
             = new CorridaDeCachorro(expectedApostadores);
 
         //Assert
@@ -29,7 +29,8 @@ public class CorridaDeCachorroTests
         try
         {
             var corridaDeCachorro = new CorridaDeCachorro(expectedApostadores);
-        }catch(ArgumentException ex)
+        }
+        catch (ArgumentException ex)
         {
             ex.Message.Should().Be("No minimo é permitido 5 apostadores");
         }
@@ -59,7 +60,8 @@ public class CorridaDeCachorroTests
         try
         {
             var corridaDeCachorro = new CorridaDeCachorro(5, expectedCorredores);
-        }catch( ArgumentException ex)
+        }
+        catch (ArgumentException ex)
         {
             ex.Message.Should().Be("No minimo é permitido 4 corredores");
         }
@@ -98,7 +100,7 @@ public class CorridaDeCachorroTests
         //Assert
         apostadorEsperado.CachorroApostado.Should().Be(corredorEsperado.Id);
 
-     }
+    }
 
     [Fact]
     public void Deve_Permetir_O_Apostador_Escolher_Um_Corredor_Pelos_Nomes()
@@ -108,17 +110,32 @@ public class CorridaDeCachorroTests
         var nomeDoApostador = "Apostador-1";
         var nomeDoCorredor = "Corredor-3";
 
-        var apostadorExperado = corridaDeCachorro.Apostadores.Find(apostador => apostador.Nome.Equals(nomeDoApostador));
-        var cachorroEsperado = corridaDeCachorro.Corredores.Find(corredor => corredor.Nome.Equals(nomeDoCorredor));
+        var apostadorExperado = 
+        corridaDeCachorro.Apostadores.Find(apostador => apostador.Nome.Equals(nomeDoApostador));
+
+        var cachorroEsperado 
+        = corridaDeCachorro.Corredores.Find(corredor => corredor.Nome.Equals(nomeDoCorredor));
 
         //Act
         corridaDeCachorro.EscolherCorredor(nomeDoApostador, nomeDoCorredor);
 
         //Assert
-
         apostadorExperado.CachorroApostado.Should().Be(cachorroEsperado.Id);
         cachorroEsperado.Nome.Should().Be(nomeDoCorredor);
         apostadorExperado.Nome.Should().Be(nomeDoApostador);
+    }
+
+    [Fact]
+    public void Deve_Executar_A_Corrida_E_Algum_Corredor_Finalizar_Ela()
+    {
+        //Arrange
+        CorridaDeCachorro corridaDeCachorro = new CorridaDeCachorro(5);
+
+        //Act
+        corridaDeCachorro.Correr();
+
+        //Arrange
+        corridaDeCachorro.Corredores.Exists(corredor => corredor.DistanciaPercorrida() >= 100.0).Should().BeTrue();
 
 
     }

@@ -53,7 +53,29 @@ public class CorridaDeCachorro
         var apostador = Apostadores.Find(apostador => apostador.Nome.Equals(NomeApostador));
         var cachorroCorredor = Corredores.Find(corredor => corredor.Nome.Equals(NomeCorredor));
 
-        apostador.CachorroApostado = cachorroCorredor.Id;
+        EscolherCorredor(apostador, cachorroCorredor);
+    }
 
+    public void Correr()
+    {
+        while (ExisteCorredorCom100Metros() is false)
+        {
+            foreach (var corredor in Corredores)
+            {
+                corredor.Mover();
+            }
+        }
+    }
+
+    private bool ExisteCorredorCom100Metros()
+    {
+        foreach (var corredor in Corredores)
+        {
+            if(corredor.DistanciaPercorrida() >= 100.00)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
