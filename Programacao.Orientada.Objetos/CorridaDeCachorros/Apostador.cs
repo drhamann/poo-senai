@@ -12,4 +12,9 @@ public class Apostador : BaseModel
         Saldo = VALOR_INICIAL_CORRIDA;
         Nome = $"Apostador-{posicaoApostador}";
     }
+
+    public Apostador()
+    {
+
+    }
 }
