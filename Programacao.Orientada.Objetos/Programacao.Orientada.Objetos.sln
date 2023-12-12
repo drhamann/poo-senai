@@ -15,11 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentacao", "documentaca
 	ProjectSection(SolutionItems) = preProject
 		..\docs\Aula 3.md = ..\docs\Aula 3.md
 		..\docs\Programação Orientada a Objetos Aula 1.pdf = ..\docs\Programação Orientada a Objetos Aula 1.pdf
+		..\docs\Programação Orientada a Objetos Aula 10.pdf = ..\docs\Programação Orientada a Objetos Aula 10.pdf
 		..\docs\Programação Orientada a Objetos Aula 2.pdf = ..\docs\Programação Orientada a Objetos Aula 2.pdf
 		..\docs\Programação Orientada a Objetos Aula 3.pdf = ..\docs\Programação Orientada a Objetos Aula 3.pdf
 		..\docs\Programação Orientada a Objetos Aula 4.pdf = ..\docs\Programação Orientada a Objetos Aula 4.pdf
 		..\docs\Programação Orientada a Objetos Aula 5.pdf = ..\docs\Programação Orientada a Objetos Aula 5.pdf
 		..\docs\Programação Orientada a Objetos Aula 6.pdf = ..\docs\Programação Orientada a Objetos Aula 6.pdf
+		..\docs\Programação Orientada a Objetos Aula 7.pdf = ..\docs\Programação Orientada a Objetos Aula 7.pdf
+		..\docs\Programação Orientada a Objetos Aula 8.pdf = ..\docs\Programação Orientada a Objetos Aula 8.pdf
+		..\docs\Programação Orientada a Objetos Aula 9.pdf = ..\docs\Programação Orientada a Objetos Aula 9.pdf
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorridaDeCachorros", "CorridaDeCachorros\CorridaDeCachorros.csproj", "{7B94F8B9-570E-4220-BFAF-D9D3BA59342B}"
@@ -30,7 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projeto 1", "Projeto 1", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{8443EB34-3798-4A10-BB16-49736189DF90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID", "..\SOLID\SOLID.csproj", "{C7E65BDE-5344-4196-BC1D-7D97192B6948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLID", "..\SOLID\SOLID.csproj", "{C7E65BDE-5344-4196-BC1D-7D97192B6948}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

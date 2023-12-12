@@ -13,7 +13,7 @@
 - As premiações são 70% para o primeiro, 20% para o segundo e 10% para o terceiro
 - Deve dividir o premio para aqueles que apostaram no corredor
 - Todos devem finalizar a corrida
-- Deve mostrar ao finalizar a corrida- 
+- Deve mostrar ao finalizar a corrida 
 - Colocação dos corredores
 - Quanto cada apostador tem de saldo
 - Agora, queremos uma corrida dinamica e adicionar mais corredores 
